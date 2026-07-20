@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "zX1CU432zcUBAeXsaCzFI"
+uri = "file://stormfire-source.zip"
+type = "unspecified"
+title = "Storm'fire — Kaynak Kod ZIP"
