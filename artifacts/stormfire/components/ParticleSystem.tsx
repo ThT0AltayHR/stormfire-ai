@@ -49,11 +49,11 @@ function ParticleItem({ particle, type }: { particle: Particle; type: AmbientTyp
       Animated.parallel([
         Animated.sequence([
           Animated.delay(particle.delay),
-          Animated.timing(particle.opacity, { toValue: 0.8, duration: 500, useNativeDriver: true }),
+          Animated.timing(particle.opacity, { toValue: 0.8, duration: 500, useNativeDriver: false }),
           Animated.timing(particle.opacity, {
             toValue: 0,
             duration: particle.duration - 500,
-            useNativeDriver: true,
+            useNativeDriver: false,
           }),
         ]),
         Animated.sequence([
@@ -61,7 +61,7 @@ function ParticleItem({ particle, type }: { particle: Particle; type: AmbientTyp
           Animated.timing(particle.y, {
             toValue: endY,
             duration: particle.duration,
-            useNativeDriver: true,
+            useNativeDriver: false,
             easing: Easing.linear,
           }),
         ]),
@@ -69,8 +69,8 @@ function ParticleItem({ particle, type }: { particle: Particle; type: AmbientTyp
           Animated.delay(particle.delay),
           Animated.loop(
             Animated.sequence([
-              Animated.timing(particle.drift, { toValue: 15, duration: 1000, useNativeDriver: true }),
-              Animated.timing(particle.drift, { toValue: -15, duration: 1000, useNativeDriver: true }),
+              Animated.timing(particle.drift, { toValue: 15, duration: 1000, useNativeDriver: false }),
+              Animated.timing(particle.drift, { toValue: -15, duration: 1000, useNativeDriver: false }),
             ])
           ),
         ]),
@@ -92,12 +92,9 @@ function ParticleItem({ particle, type }: { particle: Particle; type: AmbientTyp
           backgroundColor: particle.color,
           opacity: particle.opacity,
           transform: [
-            { translateY: particle.y },
-            { translateX: particle.drift },
+            { translateY: particle.y as any },
+            { translateX: particle.drift as any },
           ],
-          shadowColor: particle.color,
-          shadowOpacity: 0.8,
-          shadowRadius: particle.size * 2,
         },
       ]}
     />
