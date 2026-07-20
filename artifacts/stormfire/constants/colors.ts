@@ -1,0 +1,43 @@
+// Storm'fire – Medieval Dark Theme
+const colors = {
+  light: {
+    text: '#F2E8D5',
+    tint: '#D4A017',
+    background: '#0D0A06',
+    foreground: '#F2E8D5',
+    card: '#1A1208',
+    cardForeground: '#F2E8D5',
+    primary: '#D4A017',
+    primaryForeground: '#0D0A06',
+    secondary: '#251A0C',
+    secondaryForeground: '#F2E8D5',
+    muted: '#1A1208',
+    mutedForeground: '#7A6540',
+    accent: '#B87333',
+    accentForeground: '#F2E8D5',
+    destructive: '#8B1A1A',
+    destructiveForeground: '#F2E8D5',
+    border: '#3D2D10',
+    input: '#251A0C',
+    // Medieval extras
+    gold: '#D4A017',
+    goldBright: '#FFD700',
+    goldDark: '#7A5C0A',
+    parchment: '#F2E8D5',
+    parchmentDark: '#C8B885',
+    ember: '#C0392B',
+    emberGlow: '#E74C3C',
+    shadow: '#050302',
+    mysticalPurple: '#3D1538',
+    shadowRealm: '#08040F',
+    shadowAccent: '#7B2FBE',
+    rune: '#4FC3F7',
+    runeGlow: '#81D4FA',
+    smoke: '#1C1408',
+    copper: '#B87333',
+    ironGray: '#2C2C2C',
+  },
+  radius: 6,
+};
+
+export default colors;
